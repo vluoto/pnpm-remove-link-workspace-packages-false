@@ -19,6 +19,7 @@ this scenario, `@vluoto/bar` is incorrectly `link:`ed to `../bar`, despite
 3. `pnpm install`
 4. `cd packages/foo`
 5. `pnpm remove react`
+6. `git diff`
 
 ```diff
 diff --git a/packages/foo/package.json b/packages/foo/package.json
