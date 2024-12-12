@@ -1,0 +1,45 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+importers:
+
+  .:
+    dependencies:
+      foo:
+        specifier: 'workspace:'
+        version: link:packages/foo
+
+  packages/bar:
+    dependencies:
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+
+  packages/foo:
+    dependencies:
+      '@vluoto/bar':
+        specifier: 1.0.1
+        version: 1.0.1
+      react:
+        specifier: ^19.0.0
+        version: 19.0.0
+
+packages:
+
+  '@vluoto/bar@1.0.1':
+    resolution: {integrity: sha512-vuNnIrx4xzf//gnbKEKE3zechtDSB2MKxMNyDHjM75EWQIxfSTeaMFJuAiw7fG4/762z3dM/jLD+/MPa/LUVLQ==, tarball: https://npm.pkg.github.com/download/@vluoto/bar/1.0.1/f2bb7680d1e538f67e1789e6b9e9ccb7eb46bf80}
+
+  react@19.0.0:
+    resolution: {integrity: sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==}
+    engines: {node: '>=0.10.0'}
+
+snapshots:
+
+  '@vluoto/bar@1.0.1':
+    dependencies:
+      react: 19.0.0
+
+  react@19.0.0: {}
